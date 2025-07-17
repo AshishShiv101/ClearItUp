@@ -4,12 +4,14 @@ import Result from './pages/Result'
 import BuyCredit from './pages/BuyCredit'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
   <>
   <div>
   <Navbar className='min-h-screen bg-slate-50'/>
+  <ToastContainer position='bottom-right'/>
     <Routes>
       <Route path='/' element={<Home/>}/>
         <Route path='/result' element={<Result />} />
