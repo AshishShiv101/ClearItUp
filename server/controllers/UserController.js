@@ -69,8 +69,8 @@ const userCredits = async(req,res) => {
         res.json({success:true,credits:userData.creditBalance})
         
     } catch (error) {
-        console.error(error.message)
-        return res.status(400).json({ success: false, message: error.message })
+            console.error(error.message)
+            return res.status(400).json({ success: false, message: error.message })
     }
 }
 
