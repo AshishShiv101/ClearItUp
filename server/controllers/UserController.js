@@ -86,7 +86,10 @@
 
     const paymentRazorpay = async (req, res) => {
         try {
-            const { clerkId, planId } = req.body;
+            const { planId } = req.body;
+            const clerkId = req.clerkId; // Get from middleware
+
+
 
             const userData = await userModel.findOne({ clerkId });
             if (!userData || !planId) {
